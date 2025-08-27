@@ -1,8 +1,13 @@
 {
   "name": "ckpt-inspector",
   "displayName": "Checkpoint Inspector",
-  "description": "A VS Code extension for inspecting safetensors files with detailed tensor information",
-  "version": "0.0.1",
+  "description": "Inspecting safetensors / pt / pth files with tensor information & metadata",
+  "version": "0.1.0",
+  "publisher": "oplia",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onlca/ckpt-inspector.git"
+  },
   "engines": {
     "vscode": "^1.103.0"
   },
