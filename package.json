@@ -3,7 +3,7 @@
   "displayName": "Checkpoint Inspector",
   "description": "Inspecting safetensors / pt / pth files with tensor information & metadata",
   "version": "0.1.0",
-  "publisher": "oplia",
+  "publisher": "onlca",
   "repository": {
     "type": "git",
     "url": "https://github.com/onlca/ckpt-inspector.git"
