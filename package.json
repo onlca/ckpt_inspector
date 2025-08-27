@@ -21,6 +21,11 @@
         "command": "ckpt-inspector.openSafetensors",
         "title": "Open with Safetensors Inspector",
         "category": "Checkpoint Inspector"
+      },
+      {
+        "command": "ckpt-inspector.openPyTorch",
+        "title": "Open with PyTorch Inspector",
+        "category": "Checkpoint Inspector"
       }
     ],
     "customEditors": [
@@ -33,6 +38,19 @@
           }
         ],
         "priority": "default"
+      },
+      {
+        "viewType": "ckpt-inspector.pytorch",
+        "displayName": "PyTorch Model Inspector",
+        "selector": [
+          {
+            "filenamePattern": "*.pt"
+          },
+          {
+            "filenamePattern": "*.pth"
+          }
+        ],
+        "priority": "default"
       }
     ],
     "menus": {
@@ -40,6 +58,11 @@
         {
           "command": "ckpt-inspector.openSafetensors",
           "when": "resourceExtname == .safetensors",
+          "group": "navigation"
+        },
+        {
+          "command": "ckpt-inspector.openPyTorch",
+          "when": "resourceExtname == .pt || resourceExtname == .pth",
           "group": "navigation"
         }
       ]
@@ -55,7 +78,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
+    "@types/node": "^22.18.0",
     "@types/vscode": "^1.103.0",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
@@ -65,6 +88,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "buffer": "^6.0.3"
+    "buffer": "^6.0.3",
+    "python-shell": "^5.0.0"
   }
 }
